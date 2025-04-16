@@ -62,6 +62,7 @@ title: Music
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     border-radius: 10px;
+    min-height: 120px;  /* Ensure audio player has enough space */
   }
 
   .grid-item img,
@@ -69,6 +70,12 @@ title: Music
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+  /* Ensure the audio player spans the full width of the container */
+  .grid-item audio {
+    width: 100%;
+    height: auto;
   }
 
   /* Responsive layout for mobile devices */
