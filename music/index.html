@@ -3,26 +3,72 @@ layout: default
 title: Music
 ---
 
-		<div class="Music">
-			<h1></h1>
-			<p>Want to modulate sound with DNA? Check out gene.expressionz on <a href="https://www.instagram.com/p/Csmvu3WvCS9/?igsh=MzRlODBiNWFlZA%3D%3D">Instagram</a> - my collaboration with <a href="https://lostchocolatelab.com/">Lost Chocolate Lab</a> and <a href="https://pedalbrainz.com/">Pedal Brainz</a></p>
-			<p style="text-align:center;"><img src="/pdfs/Screenshot 2024-04-18 at 15.04.11.png" width="427" height="312" class="center">
-			<div align="center">
-			<figure>
-    				<figcaption></figcaption>
-    				<audio 
-				       controls controlsList="nodownload"
-				       src="run.mp3">
-						<a href="run.mp3"> 
-							Download audio 
-						</a>
-				</audio>
-			</figure>
-			</div>
-			<p style="text-align:center;"><img src="/pics/Tape.gif" width="512" height="512" class="center">
-			<p style="text-align:center;"><img src="/pics/MPK_smaller.GIF" width="512" height="512" class="center">
-			<p> </p>
-			<br>
-			<p> </p>
-				</ul>
-		</div>
+<div class="Music">
+  <h1></h1>
+  <p>
+    Want to modulate sound with DNA? Check out gene.expressionz on 
+    <a href="https://www.instagram.com/p/Csmvu3WvCS9/?igsh=MzRlODBiNWFlZA%3D%3D">Instagram</a> — 
+    my collaboration with 
+    <a href="https://lostchocolatelab.com/">Lost Chocolate Lab</a> and 
+    <a href="https://pedalbrainz.com/">Pedal Brainz</a>
+  </p>
+
+  <!-- Grid Layout for Media -->
+  <div class="media-grid">
+    <!-- Top Left: Static Image -->
+    <div class="grid-item">
+      <img src="/pdfs/Screenshot 2024-04-18 at 15.04.11.png" alt="Feature image">
+    </div>
+
+    <!-- Top Right: Audio Player -->
+    <div class="grid-item">
+      <audio controls controlsList="nodownload">
+        <source src="run.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Bottom Left: GIF 1 -->
+    <div class="grid-item">
+      <img src="/pics/Tape.gif" alt="GIF 1">
+    </div>
+
+    <!-- Bottom Right: GIF 2 -->
+    <div class="grid-item">
+      <img src="/pics/MPK_smaller.GIF" alt="GIF 2">
+    </div>
+  </div>
+</div>
+
+<style>
+  .media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .grid-item {
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .grid-item img,
+  .grid-item audio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Responsive layout for mobile devices */
+  @media (max-width: 768px) {
+    .media-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
